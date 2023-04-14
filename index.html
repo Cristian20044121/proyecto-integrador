@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/logotipo_jugueteria-cosmica.PNG" alt=""></a>
+        <div class="busqueda">
+            <input type="text" placeholder="🔍 buscar juguetes">
+        </div>
+        <nav class="menu-navegacion">
+            <button class="btn-cart">🛒</button>
+            <a href="create.html" class="links">Alta</a>          
+            <a href="contact.html" class="links">Contacto</a>
+            <a href="about-us.html" class="links">Nosotros</a>        
+        </nav>
+    </header>
+
+    <section class="cart-modal-container">
+        <h2>Cart Modal</h2>
+        <button class="cierre" title="close shopping cart">X</button>
+        <table class="cart-table">
+            <tr>
+            <th colspan="2">Producto</th>
+            <th>Precio</th>
+            <th>Cant.</th>
+            <th>Subtotal</th>
+            <td></td>
+            </tr>
+
+            <!-- product 1 -->
+            <tr>
+                <td><img src="img/products/figuras-bandicoot.jpg" alt="muñecos-bandicoot"></td>
+                <td>Bandicoot figuras</td>
+                <td>$50.000</td>
+                <td>2</td>
+                <td>$100.000</td>
+                <td><button><img src="img/boton_delete.png" alt="image of button delete" class="button_delete" title="delete product"></button></td>
+            </tr>
+
+            <!-- product 2 -->
+            <tr>
+                <td><img src="img/products/lego-76179-dc-batman-y-selina-kyle-persecucion-en-moto.jpg" alt="juego de lego batman"></td>
+                <td>Lego: Batman</td>
+                <td>$12.000</td>
+                <td>5</td>
+                <td>$60.000</td>
+                <td><button><img src="img/boton_delete.png" alt="image of button delete" class="button_delete" title="delete product"></button></td>
+            </tr>
+
+            <!-- product 3 -->
+            <tr>
+                <td><img src="img/products/Monopoly.jpg" alt="juego de mesa monopoly"></td>
+                <td>Juego de mesa: Monopoly</td>
+                <td>$25.500</td>
+                <td>3</td>
+                <td>$75.000</td>
+                <td><button><img src="img/boton_delete.png" alt="image of button delete" class="button_delete" title="delete product"></button></td>
+            </tr>
+
+            <!-- product 4 -->
+            <tr>
+                <td><img src="img/products/Pista-Hotwheels.webp" alt="pista de carros"></td>
+                <td>Pista Hotwheels</td>
+                <td>$40.125</td>
+                <td>1</td>
+                <td>$40.125</td>
+                <td><button title="delete"><img src="img/boton_delete.png" alt="image of button delete" class="button_delete" title="delete product"></button></td>
+            </tr>
+
+            <!-- product 5 -->
+            <tr>
+                <td><img src="img/products/carro-grande.webp" alt="carro grande"></td>
+                <td>Carro grande a control remoto</td>
+                <td>$255.000</td>
+                <td>2</td>
+                <td>$510.000</td>
+                <td><button><img src="img/boton_delete.png" alt="image of button delete" class="button_delete" title="delete product"></button></td>
+            </tr>
+
+            <!-- total  -->
+            <tfoot>
+                <tr>
+                    <td colspan="4"></td>
+                    <td>$785.125</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section class="products_container">
+        <!-- <h2>Nuestros Productos</h2> -->
+            <!-- card 1 -->
+            <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                <div class="products_container_product-card_product-image">
+                    <img src="img/products/figuras-bandicoot.jpg" alt="figures of crash bandicoot">
+                    <h3>Bandicoot collectible figures</h3>
+                </div>
+                <div class="products_container_description-product">
+                    <p>Figura Crash Bandicoot Colección X4 Video Juego</p>
+                    <p>$50.000 <span><i> 70% </i></span></p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p>
+                </div>
+                <div class="products_container_product-card_card-button">
+                    <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                <div class="products_container_product-card_product-image">
+                    <img src="img/products/Monopoly.jpg" alt="game of table Monopoly">
+                    <h3>Board game Monopoly</h3>
+                </div>
+                <div class="products_container_description-product">
+                    <p>Juego de mesa Monopoly para jugar en familia</p>
+                    <p>$25.500 <span><i> 30% </i></span></p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p>
+                 </div>
+                 <div class="products_container_product-card_card-button">
+                    <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                 </div>
+             </div>
+
+             <!-- card 3 -->
+             <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                 <div class="products_container_product-card_product-image">
+                     <img src="img/products/Pista-Hotwheels.webp" alt="Speedway">
+                     <h3>Hot wheels track</h3>
+                 </div>
+                 <div class="products_container_description-product">
+                    <p> Hot Wheels con espectaculares modelos en lindos diseños que a tu pequeño le encantarán. Son coleccionables ¡Adquiérelos ahora!</p>
+                    <p>$40.125 <span><i> 10% </i></span></p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p>
+                 </div>
+                 <div class="products_container_product-card_card-button">
+                     <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                 </div>
+             </div>
+
+             <!-- card 4 -->
+             <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                 <div class="products_container_product-card_product-image">
+                     <img src="img/products/lego-76179-dc-batman-y-selina-kyle-persecucion-en-moto.jpg" alt="figures of Lego Batman">
+                     <h3>Figures of Lego Batman</h3>
+                 </div>
+                 <div class="products_container_description-product">
+                    <p> Juego que contiene legendarios personajes y asombrosos vehículos para armar</p>
+                    <p>$12.000 <span><i> 5% </i></span></p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                 </div>
+                 <div class="products_container_product-card_card-button">
+                     <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                 </div>
+             </div>
+
+             <!-- card 5 -->
+             <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                 <div class="products_container_product-card_product-image">
+                     <img src="img/products/carro-rapido-y-furioso.jpg" alt="fast and furious car">
+                     <h3>Fast and furious car</h3>
+                 </div>
+                 <div class="products_container_description-product">
+                    <p>Es una réplica coleccionable del emblemático deportivo de gran potencia que captura plenamente su aspecto. Ideal para niños entusiastas de los coches y fans de la trepidante saga Rápido y Furio</p>
+                    <p>$169.000 <span><i> 60% </i></span></p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p>
+                 </div>
+                 <div class="products_container_product-card_card-button">
+                     <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                 </div>
+             </div>
+
+             <!-- card 6  -->
+             <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                 <div class="products_container_product-card_product-image">
+                     <img src="img/products/monopoly-mario-bros.webp" alt="game of table Monopoly Super Mario">
+                     <h3>Board game Monopoly Super Mario</h3>
+                 </div>
+                 <div class="products_container_description-product">
+                    <p>Monopoly Gamer celebra Super Mario los jugadores pueden comprar, vender, comerciar y ganar todo con este juego de mesa Monopoly inspirado en las obras de arte icónicas de Super Mario, personajes y temas</p>
+                    <p>$47.700 <span><i> 25% </i></span></p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p>
+                 </div>
+                 <div class="products_container_product-card_card-button">
+                     <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                 </div>
+             </div>
+
+             <!-- card 7  -->
+             <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                 <div class="products_container_product-card_product-image">
+                     <img src="img/products/carts-poker.webp" alt="poker cards">
+                     <h3>Poker cards</h3>
+                 </div>
+                 <div class="products_container_description-product">
+                    <p>Juego de cartas de póker impermeables y duraderas, ideal para usar en la playa, piscina, exteriores</p>
+                    <p>$4.000</p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                 </div>
+                 <div class="products_container_product-card_card-button">
+                     <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                 </div>
+             </div>
+
+             <!-- card 8 -->
+             <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                 <div class="products_container_product-card_product-image">
+                     <img src="img/products/figura-mandalorian-wild.png" alt="Figure The Mandalorian Wild Riding Grogu - Star Wars">
+                     <h3>Figure The Mandalorian Wild Riding Grogu - Star Wars</h3>
+                 </div>
+                 <div class="products_container_description-product">
+                    <p>¡Lleva a casa al personaje más buscado de la galaxia con la figura Wild Ridin' Grogu de Star Wars y su coche flotante. Este juguete de Star Wars cuenta con diseño y decorado inspirados en la serie The Mandalorian.</p>
+                    <p>$185.950<span><i> 50% </i></span></p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                 </div>
+                 <div class="products_container_product-card_card-button">
+                     <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                 </div>
+             </div>
+
+             <!-- card 9  -->
+             <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                 <div class="products_container_product-card_product-image">
+                     <img src="img/products/uno.webp" alt="card game uno">
+                     <h3>Card game uno</h3>
+                 </div>
+                 <div class="products_container_description-product">
+                    <p>El clásico juego UNO se reinventa para traerte una nueva experiencia en donde las reglas cambian, trae cartas con dos caras que podrás voltear para cambiar el juego, cuenta con 112 cartas para que juegues hasta con 10 personas ¡Adquiérelo ahora¡ Recomendado para mayores de 7 años.</p>
+                    <p>$24.900</p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                 </div>
+                 <div class="products_container_product-card_card-button">
+                     <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                 </div>
+             </div>
+
+            <!-- card 10 -->
+            <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                <div class="products_container_product-card_product-image">
+                    <img src="img/products/bowsers-lava-battle-set.webp" alt="Super Mario Lava Browser Battle Game">
+                    <h3>Super Mario Lava Browser Battle Game</h3>
+                </div>
+                <div class="products_container_description-product">
+                    <p>Encuentra en el set de Batalla de Lava de Browser la posibilidad de recrear toda la emoción de tu video juego favorito Super Mario.</p>
+                    <p>$229.900</p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                </div>
+                <div class="products_container_product-card_card-button">
+                    <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                </div>
+            </div>
+
+            <!-- card 11 -->
+            <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                <div class="products_container_product-card_product-image">
+                    <img src="img/products/lego-star-wars.webp" alt="game lego-Star-Wars">
+                    <h3>LEGO® Star Wars™ Bolsa Promocional SW Episodio VIII</h3>
+                </div>
+                <div class="products_container_description-product">
+                    <p>Bolsa LEGO® Star Wars Walker de asalto de la primera orden (30497).</p>
+                    <p>$17.430</p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                </div>
+                <div class="products_container_product-card_card-button">
+                    <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                </div>
+            </div>
+
+            <!-- card 12 -->
+            <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                <div class="products_container_product-card_product-image">
+                    <img src="img/products/juego-de-mesa-en-raya.webp" alt="board game: four in a row">
+                    <h3>Board game: four in a row</h3>
+                </div>
+                <div class="products_container_description-product">
+                    <p>¿Eres aficionado a los jugos de estrategia e ingenio?, con el clásico juego de velocidad e ingenio de cuatro en raya podrás desafiar a todos tus amigos y familiares, pasa horas de calidad con este clásico juego.</p>
+                    <p>$49.900<span><i>30%</i></span></p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                </div>
+                <div class="products_container_product-card_card-button">
+                    <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                </div>
+            </div>
+
+            <!-- card 13 -->
+            <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                <div class="products_container_product-card_product-image">
+                    <img src="img/products/funko-mortal-kombat.webp" alt="figure Funko Pop Movies: Mortal Kombat - Scorpion">
+                    <h3> Funko Pop Movies: Mortal Kombat - Scorpion</h3>
+                </div>
+                <div class="products_container_description-product">
+                    <p>De Mortal Kombat Scorpion Metal Pop! Figura de vinilo, Scorpion de Mortal Kombat Hecho de plástico / vinilo de 9 centímetros de alto ¡Todo vinilo Pop! Incluye caja a menos que se indique lo contrario</p>
+                    <p>$54.900<span><i>30%</i></span></p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                </div>
+                <div class="products_container_product-card_card-button">
+                    <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                </div>
+            </div>
+
+            <!-- card 14 -->
+            <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                <div class="products_container_product-card_product-image">
+                    <img src="img/products/funko-harry-potter.webp" alt="figure Funko Pop Harry Potter Quidditch Movies">
+                    <h3>Funko Pop Harry Potter Quidditch Movies</h3>
+                </div>
+                <div class="products_container_description-product">
+                    <p>Esta increíble figura fabricada en vinilo con cabeza oscilante llamada POP de la marca Funko también conocidos como Funko POP, hace parte de uno de los tantos disponibles para coleccionar.</p>
+                    <p>$80.900<span><i>50%</i></span></p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                </div>
+                <div class="products_container_product-card_card-button">
+                    <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                </div>
+            </div>
+
+            <!-- card 15  -->
+            <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                <div class="products_container_product-card_product-image">
+                    <img src="img/products/castillo-bouwser.webp" alt="bouwsers castle">
+                    <h3>bouwsers castle</h3>
+                </div>
+                <div class="products_container_description-product">
+                    <p>El castillo de Bowser es una fortaleza con muchas trampas ocultas. Mario deberá tener mucho cuidado para encontrar a Bowser adentro y derrotarlo</p>
+                    <p>$300.000<span><i>85%</i></span></p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                </div>
+                <div class="products_container_product-card_card-button">
+                    <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                </div>
+            </div>
+
+            <!-- card 16 -->
+            <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                <div class="products_container_product-card_product-image">
+                    <img src="img/products/juego-de-mesa-clue.webp" alt="board game CLUE">
+                    <h3>Board game CLUE</h3>
+                </div>
+                <div class="products_container_description-product">
+                    <p>Hubo Un asesinato y hay 6 sospechosos, ¿crees poder encontrar el culpable? En este intrigante juego, los jugadores deben descubrir quién es el responsable de asesinar al Sr. Boddy de Tudo en su propia casa. ¿Fue Plum con la llave inglesa en la biblioteca? ¿O verde con el candelabro en el estudio? Elimina la información a lo largo del juego. El jugador que acusa correctamente gana.</p>
+                    <p>$70.000</p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                </div>
+                <div class="products_container_product-card_card-button">
+                    <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                </div>
+            </div>
+
+            <!-- card 17 -->
+            <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                <div class="products_container_product-card_product-image">
+                    <img src="img/products/batman-mascara.webp" alt="batman mask">
+                    <h3>Batman mask</h3>
+                </div>
+                <div class="products_container_description-product">
+                    <p>¿Quieres saber que se siente ser el murciélago de la noche que combate el mal en Ciudad Gótica? Ahora podrás conviértete en ¡Batman! Con su máscara podrás vigilar el movimiento de cada uno de los villanos activando su sistema integrado de visión nocturna</p>
+                    <p>$99.999 <span><i>90%</i></span></p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                </div>
+                <div class="products_container_product-card_card-button">
+                    <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                </div>
+            </div>
+
+            <!-- card 18 -->
+            <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                <div class="products_container_product-card_product-image">
+                    <img src="img/products/chess-game.webp" alt="board game Chess Game">
+                    <h3>Board game Chess Game</h3>
+                </div>
+                <div class="products_container_description-product">
+                    <p>¿Estás preparado para enfrentarte a tu oponente en el mejor jugo de estrategia? Desafía y descubre quien puede superar al otro en el Ajedrez</p>
+                    <p>$29.000</p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                </div>
+                <div class="products_container_product-card_card-button">
+                    <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                </div>
+            </div>
+
+            <!-- card 19  -->
+            <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                <div class="products_container_product-card_product-image">
+                    <img src="img/products/lego-minecraft.jpg" alt="game lego lego minecraft">
+                    <h3>Game Lego Minecraft</h3>
+                </div>
+                <div class="products_container_description-product">
+                    <p>El set LEGO® Minecraft™ La Mina Abandonada (21166) traslada al mundo real la clásica acción del universo Minecraft. Los niños podrán ayudar al personaje principal del juego a extraer minerales, construir y explorar mientras intenta sobrevivir a los constantes ataques de diversas criaturas hostiles. </p>
+                    <p>$159.000 <span><i>40%</i></span></p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                </div>
+                <div class="products_container_product-card_card-button">
+                    <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                </div>
+            </div>
+
+            <!-- card 20 -->
+            <div class="products_container-product_card">
+                <h2>Juguetería Cósmica</h2>
+                <div class="products_container_product-card_product-image">
+                    <img src="img/products/card-jurasic-park.webp" alt="Jurassic Zoom Riders Dominion">
+                    <h3>Jurassic Zoom Riders Dominion</h3>
+                </div>
+                <div class="products_container_description-product">
+                    <p>Para el nuevo espectaculo de la pelicula Jurassic World Dominion, vuelve la coleccion de carros Zoom Riders, en forma de dinosaurios más imponente y poderoso Con poder pull back (de retroceso). </p>
+                    <p>$39.500 </p>
+                    <p>Envio Gratis <span><a href="" title="add favorites">💌</a> </span></p> 
+                </div>
+                <div class="products_container_product-card_card-button">
+                    <a href="#" class="buy">🛒 <span>Add to Cart</span></a>
+                </div>
+            </div>
+    </section>
+
+<!-- footer -->
+<footer>
+    <h2>Proyecto Integrador: Juguetería Cósmica</h2>
+    <h3>Cristian David Caro Herrera</h3>
+    <div class="info-footer">
+        <div>
+            <img src="img/logotipo_jugueteria-cosmica.PNG" alt="juguetería cósmica">
+            <p>Donde la felicidad se encuentra en los juguetes: descubra un nuevo mundo de compras en nuestro mercado de jugueteria cosmica.</p>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#"> Los más vendidos </a></li>
+                <li><a href="#">Calidad</a></li>
+                <li><a href="#">Familiares</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="create.html">Alta</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="about-us.html">Nosotros</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Términos</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Empresas asociadas</a></li>
+            </ul>
+        </div>
+    </div>
+    <p> © 2023 Juguteria Cosmica, los mejores en juguetes.</p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+

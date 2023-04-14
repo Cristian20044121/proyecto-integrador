@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Alta</title>
+</head>
+<body style="background-image: url(img/toys-interior-wallpaper-preview.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+
+    <header>
+        <a href=""><img src="/img/logotipo_jugueteria-cosmica.PNG" alt=""></a>
+        <div class="busqueda">
+            <input type="text" placeholder="🔍 buscar juguetes">
+        </div>
+    <nav class="menu-navegacion">
+        <button class="btn-cart">🛒</button>
+        <a href="index.html"><button class="links">Inicio</button></a>
+        <a href="contact.html"><button class="links">Contacto</button></a>
+        <a href="about-us.html"><button class="links">Nosotros</button></a>   
+    </nav>
+    </header>
+    <section class="cart-modal-container">
+        <button class="cierre">X</button>
+        <table class="cart-table">
+            <tr>
+            <th colspan="2">Producto</th>
+            <th>Precio</th>
+            <th>Cant.</th>
+            <th>Subtotal</th>
+            <td></td>
+            </tr>
+
+            <!-- product 1 -->
+            <tr>
+                <td><img src="/img/products/Bandicoot-figuras-de-vinilo-de-8-unids-set-juguetes-coleccionables-mu-ecos-de-juguete-regalo-para.jpg_Q90.jpg_.webp" alt="muñecos-bandicoot"></td>
+                <td>Bandicoot figuras</td>
+                <td>$50.000</td>
+                <td>2</td>
+                <td>$100.000</td>
+                <td><button><img src="/img/boton_delete.png" alt="button-delete" id="button_delete"></button></td>
+            </tr>
+
+            <!-- product 2 -->
+            <tr>
+                <td><img src="/img/products/lego-76179-dc-batman-y-selina-kyle-persecucion-en-moto.jpg" alt="juego de lego batman"></td>
+                <td>Lego: Batman</td>
+                <td>$12.000</td>
+                <td>5</td>
+                <td>$60.000</td>
+                <td><button><img src="/img/boton_delete.png" alt="button-delete" id="button_delete"></button></td>
+            </tr>
+
+            <!-- product 3 -->
+            <tr>
+                <td><img src="/img/products/Monopoly.jpg" alt="juego de mesa monopoly"></td>
+                <td>Juego de mesa: Monopoly</td>
+                <td>$25.500</td>
+                <td>3</td>
+                <td>$75.000</td>
+                <td><button><img src="/img/boton_delete.png" alt="button-delete" id="button_delete"></button></td>
+            </tr>
+
+            <!-- product 4 -->
+            <tr>
+                <td><img src="/img/products/Pista-Hotwheels.webp" alt="pista de carros"></td>
+                <td>Pista Hotwheels</td>
+                <td>$40.125</td>
+                <td>1</td>
+                <td>$40.125</td>
+                <td><button title="delete"><img src="/img/boton_delete.png" alt="button-delete" id="button_delete"></button></td>
+            </tr>
+
+            <!-- product 5 -->
+            <tr>
+                <td><img src="/img/products/carro-grande.webp" alt="carro grande"></td>
+                <td>Carro grande a control remoto</td>
+                <td>$255.000</td>
+                <td>2</td>
+                <td>$510.000</td>
+                <td><button><img src="/img/boton_delete.png" alt="button-delete" id="button_delete"></button></td>
+            </tr>
+
+            <!-- total  -->
+            <tr>
+                <td colspan="4" ></td>
+                <td>$785.125</td>
+                <td></td>
+            </tr>
+        </table>
+    </section>
+                <form action="#">
+                    <fieldset id="caja">
+                    <legend>Datos Del Producto</legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre"  required> <br>
+
+                    <label for="precio">Precio:</label>
+                    <input type="number" required id="precio" placeholder="$199.000"> <br>
+
+                    <label for="stock">Stock:</label>
+                    <input type="number" required id="stock" min="1" max="10" placeholder="Ej: 1-10"> <br>
+
+                    <label for="marca">Marca:</label>
+                    <input type="text" required id="marca"> <br>
+
+                    <label for="categoria">Categoria:</label>
+                    <select  id="categoria" required>
+                        <option value="">Seleccionar</option>
+                        <option value="1">Autos y circuitos</option>
+                        <option value="2">Mesa</option>
+                        <option value="3">Figuras de acción</option>
+                        <option value="4">Muñecas</option>
+                        <option value="5">Robots</option>
+                    </select>
+                    <br>
+                    
+
+                    <label for="descripcion-corta">Descripcion Corta:</label>
+                    <textarea name="descripcion" id="descripcion-corta" cols="30" rows="10" required minlength="20" maxlength="60"></textarea> <br>
+
+                    <label for="descripcion-larga">Descripcion Larga:</label>
+                    <textarea  id="descripcion-larga" maxlength="100"  cols="30" rows="10"></textarea> <br>
+                    <div class="flex">
+                    <label for="envio-sin-cargo">Envio Sin Cargo:</label>
+
+                    <label for="no" name="no"><br> No 
+                        <input type="radio" id="no" value="no" name="seleccion">
+                    </label>
+
+                    <label for="si"> <br> Si
+                        <input type="radio" id="si" value="si" name="seleccion" checked>
+                    </label> <br>
+
+                    
+
+                    <label for="edad-desde">Edad Desde:</label>
+                    <label for="pequeños">
+                        <input type="radio" id="pequeños" name="edad-desde" checked> 
+                        3-5 años
+                    </label>
+
+                    <label for="medianos"> 
+                        <input type="radio" id="medianos" name="edad-desde"> 
+                        5-10 años
+                    </label>
+                    <label for="edad-hasta">Edad Hasta:</label>
+                    <label for="grandes"> 
+                        <input type="radio" id="grandes" name="edad-hasta"> 
+                        10-18 años
+                    </label>
+                    <label for="grandes"> 
+                        <input type="radio" id="grandes" name="edad-hasta"> 
+                        18-25 años
+                    </label>
+                </div> <br> <br>
+                <label for="file">Cargar Foto:</label>
+                <input type="file" required id="file">
+                </div> <br> <br>
+                    <input type="submit" id="btn" disabled>
+                </form>
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+    <script src="/js/modules/create.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>
