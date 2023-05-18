@@ -1,27 +1,24 @@
-
-
-
-
-const form_name = document.getElementById('nombre');
-const form_price = document.getElementById('precio');
-const form_stock = document.getElementById('stock');
-const form_brand = document.getElementById('marca');
-const form_category = document.getElementById('categoria');
-const form_data = document.getElementById('form');
-const form_short_description = document.getElementById('descripcion-corta');
-const form_long_description = document.getElementById('descripcion-larga');
-const form_button = document.getElementById('btn');
+// validar formulario 
+const formName = document.getElementById('nombre');
+const formPrice = document.getElementById('precio');
+const formStock = document.getElementById('stock');
+const formBrand = document.getElementById('marca');
+const formCategory = document.getElementById('categoria');
+const formData = document.getElementById('form');
+const formShortDescription = document.getElementById('descripcion-corta');
+const formLongDescription = document.getElementById('descripcion-larga');
+const formButton = document.getElementById('btn');
 
 
 form_data.addEventListener('keyup', e=>{
-    if(form_name.value !== '' && form_price.value !== '' && form_stock.value !== '' && form_short_description.value !== '' && form_long_description.value !== '' && validar() != ''){
-        form_button.disabled= false
+    if(formName.value !== '' && formPrice.value !== '' && formStock.value !== '' && formShortDescription.value !== '' && formLongDescription.value !== '' && validar() != ''){
+        formButton.disabled= false
     }
-  
-})
+});
 
 function validar(){
-    form_category.addEventListener('change', function(){
-        form_button.disabled = false;
-    })}
+    formCategory.addEventListener('change', function(){
+        formButton.disabled = false;
+    });
+};
 

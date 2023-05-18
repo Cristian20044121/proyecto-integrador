@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2? family= Outfit:wght@400;700 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root{
     --colorButon: #cfd9e6;
@@ -8,6 +9,7 @@
     --conten-background-accordion: #120907;
     --color-content-accordion: #20dad8;
     --border-title-accordion: #dedede;
+    --typography-description-cards: 'Poppins', sans-serif;
 }
 
 *{
@@ -85,9 +87,11 @@ header a>img{
 }
 .menu-navegacion .links:active{
     font-style: italic;
+    color: #1f9fd0;
+    text-shadow: 1px 1px 1px #0b3355;
 }
 footer{
-    margin-top: 30px;
+    margin-top: 400px;
     padding: 70px;
     height: 80px;
     height: 80%;
@@ -146,8 +150,8 @@ footer>P{
 }
 .products_container-product_card{
     border: 1px solid #33333320;
-    width: 20%;
-    padding: 5px;
+    width: 18%;
+    padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
 }
@@ -155,38 +159,35 @@ footer>P{
     font-size: 8px;
     float: right;
     font-weight: bold;
-    width: 25%;
+    width: 15%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:#5f36b9;
     font-style: oblique;
 }
-/* card hover  */
-
-.products_container-product_card:hover .products_container_description-product{
-    display: block;
-}
 .products_container-product_card:hover{
-    transition: all .4s ease;
+    transition: all .2s ease;
     cursor: pointer;
     box-shadow: 0px 0px 20px 0px #858c8f;
-    width: 30%;
 }
 .products_container-product_card:hover h2{
     color: #6d17bc;
-    font-size: 11px;
+    font-size: 8px;
 }
 .products_container-product_card:hover h3{
     color: #6d17bc;
 }
-
+.products_container_product-card_product-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 .products_container_product-card_product-image img{
-    border-radius: 1px;
+    border-radius: 1px;    
 }
 .products_container-product_card:hover .products_container_product-card_product-image img{
     filter: saturate(150%);
-    width: 60%;
-    height: 250px;
-    transition: all .4s ease;
 }
 .products_container-product_card:hover .buy{
     display: block;
@@ -203,12 +204,12 @@ footer>P{
 }
 .products_container_description-product{
     padding: 10px;
-    display: none;
-    flex-grow: 1;
+    display: block;
 }
 .products_container_description-product p:nth-child(1){
     font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-family: var(--typography-description-cards);
 }
 .products_container_description-product p:nth-child(2) {
     font-weight: bold;
@@ -234,7 +235,7 @@ footer>P{
     font-size: 18px;
 }
 
-/* buttonn card  */
+/* buttonn card  */ 
 .products_container_product-card_card-button .buy{
     border: 1px solid black;
     box-shadow: 2px 2px 2px black;
@@ -356,42 +357,57 @@ textarea:focus{
     cursor: pointer;
     box-shadow: 1px 9px 20px -5px #686a6b;
 }
-/*nosotros*/
-/* 
-/*alta*/
 
-.form-create{
-    width: 80%;
-    margin: 50px auto;
+/*alta*/
+.container-create{
+    margin: 100px;
 }
-.form-create > h2{
+.form-create{
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 10px;
+}
+.container-create> h2{
     text-align: center;
     font-weight: bold;
     font-size: 40px;
     color: #115571;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.form-create > form{
-    width: 80%;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
+.form-create form > h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: #115571;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.form-create> form{
+    width: 40%;
+    padding: 10px;
 }
 .form-create > form > label{
     color: #31afb4;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 10px;
 }
-.form-create > form > input,textarea{
-    width: 80%;
-    display: flex;
+.form-create > form > input{
+    width: 50%;
     border-radius: 10px;
     border: none;
     background-color: #bbcdcc92;
     padding: 10px;
     resize: none;
+    margin: 20px;
     cursor: pointer;
+}
+.form-create > form > textarea{
+    width: 40%;
+    margin: 5px;
 }
 .form-create > form > input:focus,
 textarea:focus{
@@ -405,13 +421,14 @@ textarea:focus{
     font-size: 14px;
 }
 .form-create > form> #categoria{
-    width: 10%;
+    width: 20%;
     padding: 5px;
+    margin: 10px;
     background-color: #135082;
     color: white;
 }
 .form-create > form > input[type=submit]{
-    width: 10%;
+    width: 20%;
     padding: 10px;
     margin: 20px auto;
     background-color: #135082;
@@ -426,7 +443,8 @@ textarea:focus{
     box-shadow: 1px 9px 20px -5px #686a6b;
 }
 .titles-edad{
-    
+    width: 40%;
+    margin: 50px auto;
 }
 .center{
     font-weight: bold;
@@ -474,7 +492,6 @@ textarea:focus{
 /* accordeon  */
 
 .accordion {
-    /* border: 2px solid red; */
     width: 60%;
     margin: 60px auto;
 }
@@ -648,7 +665,7 @@ table tr>td>button{
         width:25%;
     }
     .products_container-product_card:hover{
-        flex-grow: 0.2;
+        /* flex-grow: 0.2; */
     }
     .products_container-product_card>a{
         float: right;
@@ -662,11 +679,29 @@ table tr>td>button{
     }
 
     /* alta  */
+    .container-create{
+        width: 95%;   
+        margin: 100px auto;
+    }
     .form-create{
+        padding: 2px;
         width: 100%;
     }
+    .form-create > img{
+        width: 400px;
+        height: 60%;
+        align-self: center;
+    }
+    .titles-edad{
+        width: 70%;
+        margin: 50px auto;
+    }
     .form-create > form{
-        width:90%
+        width: 80%;
+        margin: 20px auto;
+    }
+    #btn{
+        width: 20%;
     }
     /* contacto  */
     .form{
@@ -745,20 +780,29 @@ table tr>td>button{
     }
 
     /* alta  */
+    .container-create{
+        width: 95%;
+        margin: 100px 0;
+    }
     .form-create{
-        width: 100%;
+        width: 95%;
+        flex-direction: column;
+        gap: 30px;
+        padding: none;
     }
     .form-create > form{
-        width: 90%;
+        width: 100%;
     }
-    .form-create  .edad{
-        flex-direction: column;
-        justify-content: center;
+    .form-create > img{
+        width: 400px;
+        margin: 10px;
     }
     .form-create > form > input[type=submit]{
         width: 50%;
     }
-
+    .titles-edad{
+        width: 70%;
+    }
     /* .accordion  */
     .accordion{
         width: 80%;

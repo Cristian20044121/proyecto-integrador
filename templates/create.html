@@ -1,0 +1,88 @@
+
+    <div class="container-create">
+        <h2>Datos Del Producto</h2>    
+    <!-- formulario  -->
+    <div class="form-create">
+        <img src="img/image-form-create.svg" alt="">
+                <form action="#" id="form" name="myform">
+                    <h2>Formulario</h2>
+                    <!-- nombre del producto  -->
+                    <label for="nombre">Name:</label>
+                    <input type="text" id="nombre"  required minlength="2" maxlength="70"> <br>
+
+                    <!-- precio  -->
+                    <label for="precio">Price:</label>
+                    <input type="number" required id="precio" placeholder="$199.000"> <br>
+
+                    <!-- stock  -->
+                    <label for="stock">Stock:</label>
+                    <input type="number" required id="stock" min="1" max="10" placeholder="Ej: 1-10"> <br>
+
+                    <!-- categoria  -->
+                    <label for="categoria">Category:</label>
+                    <select  id="categoria" required>
+                        <option value="">Seleccionar</option>
+                        <option value="1">Autos y circuitos</option>
+                        <option value="2">Mesa</option>
+                        <option value="3">Figuras de acción</option>
+                        <option value="4">Muñecas</option>
+                        <option value="5">Familiar</option>
+                        <option value="6">Bebés</option>
+                        <option value="7">Disfraz</option>
+                        <option value="8">Deporte</option>
+                        <option value="9">Colección</option>
+                        <option value="10">Control Remoto</option>
+                    </select> <br> <br>
+
+                    <!-- marca  -->
+                    <label for="marca">Brand:</label>
+                    <input type="text" required id="marca"><br>
+                    <br>
+                    
+                    <!-- descripcion corta  -->
+                    <label for="descripcion-corta">Short-description:</label>
+                    <textarea name="descripcion" id="descripcion-corta" cols="30" rows="10" required minlength="10" maxlength="200"> </textarea> <br>
+
+                    <!-- descripcion larga  -->
+                    <label for="descripcion-larga">Long Description:</label>
+                    <textarea  id="descripcion-larga"  cols="30" rows="10" maxlength="2000" minlength="10"></textarea> <br>
+                    <div class="flex">
+
+                    <!-- envio sin cargo  -->
+                    <div class="envio">
+                        <br><br>
+                        <label for="envio">Free-shoping</label>
+                        <input type="checkbox" id="envio">
+                    </div>
+                    
+                    <!-- edad desde  -->
+                    <div class="titles-edad">
+                        
+                        <div class="edad">
+                            <!-- pequeños  -->
+                            <div class="pequeños">
+                            <h3 class="center">Age-from:</h3>
+                                <input type="number" min="0" max="100">
+                            </div>
+                            <!-- grandes  -->
+    
+                            <div class="grandes">
+                                <h3 class="center">Age-up-to:</h3>
+                                <input type="number" min="0" max="100">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div> <br> <br>
+
+                <!-- cargar foto  -->
+                <label for="file">Cargar Foto:</label>
+                <input type="file" required id="file">
+                
+                <!-- boton enviar -->
+                <input type="submit" id="btn" disabled value="Enviar Datos">
+            </form>
+        </div>
+</div>
+<script src="../js/modules/create.js"></script>
+ 
