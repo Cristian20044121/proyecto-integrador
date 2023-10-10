@@ -1,0 +1,40 @@
+{{#if products.length }}
+    <table class="table-products min-w-max w-95 table-auto  overflow-y-auto" >
+                <thead>
+                    <tr class="bg-blue-500 text-white text-sm leading-normal">
+                        <th class="py-3 px-6 text-center">ID</th>
+                        <th class="py-3 px-6 text-center">Nombre</th>
+                        <th class="py-3 px-6 text-center">Precio</th>
+                        <th class="py-3 px-6 text-center">Stock</th>
+                        <th class="py-3 px-6 text-center">Marca</th>
+                        <th class="py-3 px-6 text-center">Categoría</th>
+                        <th class="py-3 px-6 text-center">Description</th>
+                        <th class="py-3 px-6 text-center">Img</th>
+                        <th class="py-3 px-6 text-center">Acciones</th>
+                    </tr>
+                </thead>
+        <tbody class="text-gray-600 text-sm font-light" id="cart-table">
+            <tr class="bg-gray-100 p-8">
+                <td colspan="5" class="py-2  font-bold mt-4 mb-8 lg:mt-0 text-[1rem] font-mono text-gray-900 capitalize bg-clip-text text-transparent bg-gradient-to-r from-sky-950 to-blue-500 text-9xl">Se encontraron {{products.length}} productos</td>
+            </tr>
+            {{#each products}}
+                <tr class="mt-4" >
+                    <td data-product-property="_id" class="font-bold" id="productId">{{_id}}</td>
+                    <td data-product-property="name" >{{name}}</td>
+                    <td data-product-property="price" class="text-center">{{price}}</td>
+                    <td data-product-property="stock" class="text-center">{{stock}}</td>
+                    <td data-product-property="brand">{{brand}}</td>
+                    <td data-product-property="category">{{category}}</td>
+                    <td data-product-property="longDescription" class="text-center text-[11px]">{{longDescription}}</td>
+                    <td data-product-property="mainPhoto" class="px-2 text-xs whitespace-nowrap overflow-hidden overflow-ellipsis max-w-[50px]" >{{mainPhoto}}</td>
+                    <td>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded btn-edit" title="Editar producto">Editar</button>
+                        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-2 btn-delete" title="Eliminar producto">Eliminar</button>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <p>No se encontraron productos</p>
+{{/if}}

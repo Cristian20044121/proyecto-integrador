@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="shortcut icon" href="img/logotipo_jugueteria-cosmica.PNG" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home</title>
+
+
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/logotipo_jugueteria-cosmica.PNG" alt="ilustration"></a>
+        <button id="toggleMenu" class="block lg:hidden focus:outline-none">
+            <i class='bx bx-menu text-2xl'></i>
+        </button>           
+            <nav class="hidden lg:flex max-w-lg  menu-navegacion">
+                <button class="btn-cart cursor-pointer ease-in duration-300 hover:h-full" title="open cart" id="openModal">
+                    <i class='bx bx-cart text-[25px]'></i>
+                </button>
+                <a href="#/home" id="home" class="links main-nav__link mx-2">Inicio</a>
+                <a href="#/create" id="create" class="links main-nav__link mx-2">Alta</a>
+                <a href="#/contact" class="links main-nav__link mx-2">Contacto</a>
+                <a href="#/about-us" class="links main-nav__link mx-2">Nosotros</a>
+            </nav>
+    </header>
+    
+    
+
+<!-- carrito -->
+<div id="myModal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50 transition-opacity"></div>
+
+    <div class="modal-container bg-white w-full md:max-w-5xl mx-auto rounded shadow-lg z-50">
+        <div class="modal-content py-4 text-left px-6">
+            <div class="flex justify-between items-center pb-3">
+                <h2 class="mt-28 lg:mt-4 text-[2rem] font-mono text-gray-900 title capitalize bg-clip-text text-transparent bg-gradient-to-r from-sky-950 to-blue-500 text-9xl">CARRITO DE COMPRAS</h2>
+                <button id="closedModal" class="text-2xl font-bold ease-in">X</button>
+            </div>
+            <!-- Contenido del modal -->
+            <div class="table-container max-h-[400px] overflow-y-scroll">
+                <table class="cart-table w-full">
+                    <tr>
+                        <th class="px-6 py-5">Producto</th>
+                        <th class="px-6 py-5">Precio</th>
+                        <th class="px-6 py-5">Cant.</th>
+                        <th class="px-6 py-5">Subtotal</th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- alert de borrado exictosamente  -->
+<div class="alert"></div>
+
+
+
+
+
+  
+        
+
+        
+    <main class="main"></main>
+<!-- footer -->
+<footer>
+    <h2>Juguetería Cósmica</h2>
+    <h3>Cristian David Caro Herrera</h3>
+    <div class="info-footer">
+        <div>
+            <a href="">
+                <img src="img/logotipo_jugueteria-cosmica.PNG" alt="juguetería cósmica">
+            </a>
+            <p>Donde la felicidad se encuentra en los juguetes: descubra un nuevo mundo de compras en nuestro mercado de jugueteria cosmica.</p>
+        </div>
+         <a href="#/home" id="home" class="links main-nav__link">Inicio</a> <br>
+                <a href="#/create" id="create" class="links main-nav__link">Alta</a><br>          
+                <a href="#/contact" class="links" id="contact main-nav__link">Contacto</a><br>
+                <a href="#/about-us" class="links" id="about-us main-nav__link">Nosotros</a>  
+        <div>
+               
+        </div>
+    </div>
+    <p> © 2023 Juguteria Cosmica, los mejores en juguetes.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+

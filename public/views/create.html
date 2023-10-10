@@ -1,0 +1,195 @@
+<!-- introduccion  -->
+<div class="flex max-w-screen-2xl mx-auto flex-wrap gap-4 mt-40">
+    <div class="max-w-md mx-auto bg-white rounded p-8 shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">Alta de Producto</h2>
+        <p class="mb-6 text-gray-700">
+          Bienvenido al formulario de alta de productos. Utiliza este formulario para ingresar la información del nuevo producto que deseas añadir a tu catálogo. Por favor, completa todos los campos obligatorios para garantizar la precisión de la información.
+        </p>
+    </div>
+
+    <div class="max-w-md mx-auto bg-white rounded p-8 shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">Editar Producto</h2>
+        <p class="mb-6 text-gray-700">
+            Si necesitas realizar modificaciones en un producto existente, presiona el botón "Editar" correspondiente en la tabla de productos. Esto abrirá un formulario prellenado con la información actual del producto seleccionado. Realiza los cambios necesarios y presiona "Editar Producto" para actualizar la información del producto.
+        </p>
+    </div>
+
+    <div class="max-w-md mx-auto bg-white rounded p-8 shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">Eliminar Producto</h2>
+        <p class="mb-6 text-gray-700">
+            Si deseas eliminar un producto de tu catálogo, simplemente presiona el botón "Borrar" correspondiente en la tabla de productos. Se te pedirá confirmar la acción para evitar borrados accidentales. Una vez confirmado, el producto será eliminado permanentemente y no podrá ser recuperado.
+        </p>
+    </div>
+</div>
+
+
+
+<!-- form de crear product  -->
+
+
+<div class="container-create bg-gray-100 p-6 shadow-lg rounded-md mt-28">
+    <h2 class="mt-4 mb-8 lg:mt-0 text-[3rem] font-mono text-gray-900 title capitalize bg-clip-text text-transparent bg-gradient-to-r from-sky-950 to-blue-500 text-9xl">Datos Del Producto</h2>    
+
+    <div class="form-create flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
+
+        <!-- Imagen -->
+        <div class="md:w-1/2 text-center">
+            <img src="img/image-form-create.svg" alt="Formulario de Creación de Producto">
+        </div>
+
+        <!-- Formulario -->
+        <form class="md:w-1/2" id="form">
+
+            <!-- Nombre del Producto -->
+            <div class="mb-4">
+                <label for="nombre" class="block font-semibold mb-2">Nombre:</label>
+                <input type="text" id="nombre" required minlength="2" maxlength="70" class="w-full p-2 border rounded-md">
+            </div>
+
+            <!-- Precio -->
+            <div class="mb-4">
+                <label for="precio" class="block font-semibold mb-2">Precio:</label>
+                <input type="number" required id="precio" placeholder="$199.000" class="w-full p-2 border rounded-md">
+            </div>
+
+            <!-- Stock -->
+            <div class="mb-4">
+                <label for="stock" class="block font-semibold mb-2">Stock:</label>
+                <input type="number" required id="stock" min="1" max="10" placeholder="Ej: 1-10" class="w-full p-2 border rounded-md">
+            </div>
+
+            <!-- Categoría -->
+            <div class="mb-4">
+                <label for="categoria" class="block font-semibold mb-2">Categoría:</label>
+                <select id="categoria" required class="w-full p-2 border rounded-md">
+                    <option value="">Seleccionar</option>
+                    <option value="1">Autos y circuitos</option>
+                    <option value="2">Mesa</option>
+                    <option value="3">Figuras de acción</option>
+                    <option value="4">Muñecas</option>
+                    <option value="5">Familiar</option>
+                    <option value="6">Bebés</option>
+                    <option value="7">Disfraz</option>
+                    <option value="8">Deporte</option>
+                    <option value="9">Colección</option>
+                    <option value="10">Control Remoto</option>
+                </select>
+            </div>
+
+            <!-- Marca -->
+            <div class="mb-4">
+                <label for="marca" class="block font-semibold mb-2">Marca:</label>
+                <input type="text" required id="marca" class="w-full p-2 border rounded-md">
+            </div>
+
+            <!-- Descripción Corta -->
+            <div class="mb-4">
+                <label for="descripcion-corta" class="block font-semibold mb-2">Descripción Corta:</label>
+                <textarea name="descripcion" id="descripcion-corta" cols="30" rows="5" required minlength="10" maxlength="200" class="w-full p-2 border rounded-md"></textarea>
+            </div>
+
+            <!-- Cargar Foto -->
+            <div class="mb-4">
+                <label for="file" class="block font-semibold mb-2">Cargar Foto:</label>
+                <input type="text" required class="w-full p-2 border rounded-md" id="image" placeholder="Carga una imagen desde un servidor web(URL)">
+            </div>
+            
+
+            <!-- Botón Enviar -->
+            <input type="submit" id="btn"  value="Enviar Datos" class="p-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-md cursor-pointer">   
+        </form>
+    </div>
+</div>
+
+
+<!-- form dit  -->
+<!-- Modal -->
+
+<div id="myModalEdit" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50 transition-opacity"></div>
+
+    <div class="modal-container bg-white w-full md:max-w-5xl mx-auto rounded shadow-lg z-50">
+        <div class="modal-content py-4 text-left px-6">
+            <div class="flex justify-between items-center pb-3">
+                <h2 class="mt-28 lg:mt-4 text-[2rem] font-mono text-gray-900 title capitalize bg-clip-text text-transparent bg-gradient-to-r from-sky-950 to-blue-500 text-9xl">EDITAR PRODUCTO</h2>
+                <button id="closed" class="text-2xl font-bold ease-in">X</button>
+            </div>
+            <!-- Contenido del modal -->
+            <form class="grid gap-4 max-h-[400px] overflow-y-scroll" id="myform">
+  
+                <!-- Nombre del Producto -->
+                <div class="flex flex-col">
+                    <label for="id" class="block font-semibold mb-2">ID:</label>
+                    <input type="text" id="productIdEdit">
+                    <br><br>
+                    <label for="nombre" class="block font-semibold mb-2">Nombre:</label>
+                    <input type="text" id="nombreEdit" required minlength="2" maxlength="70" class="w-full p-2 border rounded-md">
+                </div>
+            
+                <!-- Precio -->
+                <div class="flex flex-col">
+                    <label for="precio" class="block font-semibold mb-2">Precio:</label>
+                    <input type="number" required id="precioEdit" placeholder="$199.000" class="w-full p-2 border rounded-md">
+                </div>
+            
+                <!-- Stock -->
+                <div class="flex flex-col">
+                    <label for="stock" class="block font-semibold mb-2">Stock:</label>
+                    <input type="number" required id="stockEdit" min="1" max="10" placeholder="Ej: 1-10" class="w-full p-2 border rounded-md">
+                </div>
+            
+                <!-- Categoría -->
+                <div class="flex flex-col">
+                    <label for="categoria" class="block font-semibold mb-2">Categoría:</label>
+                    <select id="categoriaEdit" required class="w-full p-2 border rounded-md">
+                        <option value="">Seleccionar</option>
+                        <option value="1">Autos y circuitos</option>
+                        <option value="2">Mesa</option>
+                        <option value="3">Figuras de acción</option>
+                        <option value="4">Muñecas</option>
+                        <option value="5">Familiar</option>
+                        <option value="6">Bebés</option>
+                        <option value="7">Disfraz</option>
+                        <option value="8">Deporte</option>
+                        <option value="9">Colección</option>
+                        <option value="10">Control Remoto</option>
+                    </select>
+                </div>
+            
+                <!-- Marca -->
+                <div class="flex flex-col">
+                    <label for="marca" class="block font-semibold mb-2">Marca:</label>
+                    <input type="text" required id="marcaEdit" class="w-full p-2 border rounded-md">
+                </div>
+            
+                <!-- Descripción Corta -->
+                <div class="flex flex-col">
+                    <label for="descripcion-corta" class="block font-semibold mb-2">Descripción Corta:</label>
+                    <textarea name="descripcion" id="descripcion-corta-Edit" cols="30" rows="5" required minlength="10" maxlength="200" class="w-full p-2 border rounded-md"></textarea>
+                </div>
+            
+                <!-- Cargar Foto -->
+                <div class="flex flex-col">
+                    <label for="file" class="block font-semibold mb-2">Cargar Foto:</label>
+                    <input type="text" required class="w-full p-2 border rounded-md" id="imageEdit" placeholder="Carga una imagen desde un servidor web(URL)">
+                </div>
+            
+                <!-- Botón Enviar -->
+                <input type="submit" id="edit"  value="Editar Datos" class="p-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-md cursor-pointer edit">
+            
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+
+<section class="section-products-table mt-72">
+    <h2 class="mt-4 mb-8 lg:mt-0 text-[3rem] font-mono text-gray-900 title capitalize bg-clip-text text-transparent bg-gradient-to-r from-sky-950 to-blue-500 text-9xl">Listado de productos</h2>
+
+    <div class="flex justify-center max-h-screen overflow-y-auto">
+        <div class=" bg-white shadow-md rounded overflow-x-auto products-table-container">
+            <table class="min-w-max w-full table-auto " id="cart-table-products"></table>            
+        </div>
+    </div>
+</section>
