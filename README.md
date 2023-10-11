@@ -1,3 +1,3 @@
 # proyecto-integrador
-simulación de ecommerce
+<p>simulación de ecommerce</p>
 CRUD funcional con base de datos 
