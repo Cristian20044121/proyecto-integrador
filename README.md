@@ -1,7 +1,7 @@
 # Proyecto Integrador Ecommerce - Jugutería Cósmica
 
 ## Descripción del Proyecto
-Jugutería Cósmica es una página web tipo SPA (Single Page Application) diseñada para la venta de productos relacionados con el espacio y la ciencia ficción. Este proyecto integra tanto el front end como el back end, ofreciendo una experiencia de usuario completa para la compra de productos.
+Jugutería Cósmica es una página web tipo SPA (Single Page Application) diseñada para la venta de productos relacionados con juguetes. Este proyecto integra tanto el front end como el back end, ofreciendo una experiencia de usuario completa para la compra de productos.
 
 ## Tecnologías Utilizadas
 - **Front End:**
